@@ -4,14 +4,11 @@ title:      Java8 之 Stream API
 subtitle:   Java8 之 Stream API
 date:       2019-02-13
 author:     BY
-header-img: img/post-bg-coffee.jpeg
+header-img: img/top_2019_Space.jpg
 catalog: true
 tags:
     - java8
 ---
-
-@[TOC](Java8 - Stream API
-
 
 
 ## 总览
@@ -384,5 +381,5 @@ Optional<Student> optionalStudent = stream1.collect(Collectors.maxBy(Comparator.
 ```java
 String names = stream1.map(Student::getName).collect(Collectors.joining(",", "<Start>", "<End>"));
 ```
----
-[开源中国博客](https://my.oschina.net/mengzhang6/)
+
+
