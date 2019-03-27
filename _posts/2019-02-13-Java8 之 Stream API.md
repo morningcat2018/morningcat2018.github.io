@@ -13,7 +13,8 @@ tags:
 
 ## 总览
 
-![Stream](https://img-blog.csdnimg.cn/20190217100213101.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM4Mzc4MjU=,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20190217100213101.png)
+
 ## 1.介绍
 
 - Stream创建 -> 中间操作 -> 终止操作
