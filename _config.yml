@@ -1,8 +1,7 @@
 # Site settings
 title: Morning Cat's Blog
 SEOTitle: 晨猫的博客 | BY Blog
-#header-img: img/post-bg-desk.jpg
-header-img: https://oscimg.oschina.net/oscnet/470ad4b52203025117c015a7893b84a7d34.jpg
+header-img: img/desk_2019.png
 email: 1213252320@qq.com
 description: "Every failure is leading towards success."
 keyword: "BY, BY Blog, 晨猫的博客, morningcat, morningcat2018, java, spring, linux"
