@@ -1,9 +1,9 @@
 # Site settings
-title: Morning Cat's Blog
-SEOTitle: 晨猫的博客 | BY Blog
+title: Morning Cat
+SEOTitle: 晨猫的博客 | MorningCat's Blog
 header-img: img/main/desk_2019_mini.png
 email: 1213252320@qq.com
-description: "Every failure is leading towards success."
+description: "白茶清欢无别事  我在等风也等你"
 keyword: "BY, BY Blog, 晨猫的博客, morningcat, morningcat2018, java, spring, linux"
 url: "http://morningcat2018.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -18,9 +18,7 @@ sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's us
 
 # SNS settings
 RSS: false
-gitee_username:     mengzhang6
 github_username:    morningcat2018
-csdn_username:   u013837825
 
 
 
@@ -54,13 +52,13 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
+# disqus_username: xxx
 
 # Gitalk
 gitalk:
   enable: false    #是否开启Gitalk评论
-  clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
+  clientID: xxx                            #生成的clientID
+  clientSecret: xxx    #生成的clientSecret
   repo: morningcat2018.github.io    #仓库名称
   owner: morningcat2018    #github用户名
   admin: morningcat2018
@@ -95,17 +93,17 @@ service-worker: true
 
 # Friends
 friends: [
-{
-  title: "CSDN",
-  href: "https://blog.csdn.net/u013837825"
-},{
-  title: "开源中国",
-  href: "https://my.oschina.net/mengzhang6/"
-},{
-  title: "码云·Gitee",
-  href: "https://gitee.com/mengzhang6/"
-},{
-  title: "Github",
-  href: "https://github.com/mengzhang6"
-}
+#{
+#  title: "CSDN",
+#  href: "https://blog.csdn.net/u013837825"
+#},{
+#  title: "开源中国",
+#  href: "https://my.oschina.net/mengzhang6/"
+#},{
+#  title: "码云·Gitee",
+#  href: "https://gitee.com/mengzhang6/"
+#},{
+#  title: "Github",
+#  href: "https://github.com/mengzhang6"
+#}
 ]
