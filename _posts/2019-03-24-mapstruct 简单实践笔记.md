@@ -30,7 +30,7 @@ https://github.com/mapstruct/mapstruct-examples
 
 ## 实践
 
-1. 依赖
+### 1. 依赖
 
 ```xml
 <dependency>
@@ -46,7 +46,7 @@ https://github.com/mapstruct/mapstruct-examples
 </dependency>
 ```
 
-2. 定义实体类
+### 2. 定义实体类
 
 User.java
 ```java
@@ -86,7 +86,7 @@ public class UserVo {
 }
 ```
 
-3. 定义UserMapper类
+### 3. 定义UserMapper类
 
 格式为:
 ```java
@@ -98,7 +98,7 @@ public interface UserMapper {
 }
 ```
 
-4. 测试
+### 4. 测试
 ```java
 @Test
 public void test1() {
@@ -108,7 +108,7 @@ public void test1() {
 }
 ```
 
-5. 时间转换
+### 5. 时间转换
 
 三种方式：
 ```java
@@ -126,12 +126,12 @@ public void test1() {
 第二种：使用 @Mapping 注解的 expression 属性（借助外部的静态方法）
 第三种：在接口内部使用 default 实现一个默认方法（较为麻烦）
 
-6. 忽略字段
+### 6. 忽略字段
 ```java
 @Mapping(target = "id", ignore = true)
 ```
 
-7. 字段映射
+### 7. 字段映射
 
 源实体类与目标实体类字段名不一致时；
 
@@ -139,7 +139,7 @@ public void test1() {
 @Mapping(source = "name", target = "nameFor")
 ```
 
-8. List映射
+### 8. List映射
 
 ```java
 
