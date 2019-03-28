@@ -1,9 +1,9 @@
 ---
 layout:     post
 title:      Java8 之 Stream API
-subtitle:   Java8 之 Stream API
+subtitle:   关于 Java8 新特性 Stream API 的学习笔记
 date:       2019-02-13
-author:     BY
+author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
 catalog: true
 tags:
@@ -13,7 +13,7 @@ tags:
 
 ## 总览
 
-![](https://img-blog.csdnimg.cn/20190217100213101.png)
+![Stream_API_思维导图](https://img-blog.csdnimg.cn/20190217100213101.png)
 
 ## 1.介绍
 
