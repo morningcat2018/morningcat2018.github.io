@@ -12,7 +12,8 @@ tags:
 
 曾几何时，认为手动搭建一个SpringMVC工程很困难，其实去除那些繁枝末节，仅保留最核心的东西，看看还剩下什么？
 
-1. maven依赖
+### maven依赖
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -37,7 +38,8 @@ tags:
 ```
 没错，只有一个依赖；
 
-2. web.xml
+### web.xml
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -63,8 +65,9 @@ tags:
 ```
 没错，只有一个springmvc核心的servlet，即`DispatcherServlet`
 
-3. spring配置
+### spring配置
 `spring.xml`
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -79,7 +82,8 @@ tags:
 ```
 开启包扫描即可；
 
-4. controller
+### controller
+
 ```java
 package morning.cat.controller;
 
