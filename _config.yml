@@ -12,7 +12,7 @@ github_repo: "https://github.com/morningcat2018/morningcat2018.github.io" # you 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "打不倒你的，终将使你变得强大。"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/main/gentle_001.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
