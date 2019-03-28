@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      2019-02-14-信号量Semaphore的故事
+title:      信号量Semaphore的故事
 subtitle:   根据 Jdk 提供的Java多线程控制类 Semaphore 的用法 编写的一个小场景，小故事
 date:       2019-02-14
 author:     BY morningcat
