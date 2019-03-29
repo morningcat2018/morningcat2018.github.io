@@ -20,35 +20,19 @@ Java8 中的 Lambda表达式 需要“函数式”接口的支持；
 
 ### 1.1 常用的函数式接口
 
-- 消费型接口：
+- 消费型接口：Consumer<T>
 
-Consumer<T>
-```
-    void accept(T t);
-```
+> void accept(T t);
 
-
-- 供给型接口：
-
-Supplier<T>
-```
-    T get();
-```
+- 供给型接口：Supplier<T>
+> T get();
 
 
-- 函数型接口：
+- 函数型接口：Function<T, R>
+> R apply(T t);
 
-Function<T, R>
-```
-    R apply(T t);
-```
-
-- 断言型接口：
-
-Predicate<T>
-```
-    boolean test(T t);
-```
+- 断言型接口：Predicate<T>
+> boolean test(T t);
 
 其他函数式接口可在 [java.util.function](https://docs.oracle.com/javase/8/docs/api/) 包中获取学习；
 
