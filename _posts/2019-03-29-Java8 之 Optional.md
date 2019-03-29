@@ -115,16 +115,9 @@ System.out.println(result2);
  后来慢慢的用着用着，有一种感觉，确实比`if(obj == null)`看着要舒服，纯属个人感觉。
  
  
+## 文档
 
-
-
-
-
-
-
-
-
-
+[https://docs.oracle.com/javase/8/docs/api/][https://docs.oracle.com/javase/8/docs/api/]
 
 
 
