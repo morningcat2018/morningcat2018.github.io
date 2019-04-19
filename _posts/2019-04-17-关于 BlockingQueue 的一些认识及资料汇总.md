@@ -14,6 +14,7 @@ tags:
 # 关于`BlockingQueue`的一些认识及资料汇总
 
 ## BlockingQueue
+
 ```java
 public interface BlockingQueue<E> extends Queue<E> 
 
@@ -34,6 +35,7 @@ BlockingQueue 实现是线程安全的。所有排队方法都可以使用内部
 ---
 
 包含的方法：
+
 ```
 boolean	add(E e) 
           将指定元素插入此队列中（如果立即可行且不会违反容量限制），成功时返回 true，如果当前没有可用的空间，则抛出 IllegalStateException。
@@ -60,6 +62,7 @@ E	take()
 ```
 
 继承的方法：
+
 ```
 E poll()
 获取并移除此队列的头，如果此队列为空，则返回 null。
@@ -88,6 +91,7 @@ public class ArrayBlockingQueue<E> extends AbstractQueue<E>
 ---
 
 - 构造方法摘要
+
 ```
 ArrayBlockingQueue(int capacity) 
           创建一个带有给定的（固定）容量和默认访问策略的 ArrayBlockingQueue。
@@ -98,6 +102,7 @@ ArrayBlockingQueue(int capacity, boolean fair, Collection<? extends E> c)
 ```
 
 - 方法摘要
+
 ```
  boolean	add(E e) 
           将指定的元素插入到此队列的尾部（如果立即可行且不会超过该队列的容量），在成功时返回 true，如果此队列已满，则抛出 IllegalStateException。
@@ -138,6 +143,7 @@ ArrayBlockingQueue(int capacity, boolean fair, Collection<? extends E> c)
 ---
 
 - 案例
+
 ```java
 import org.junit.Test;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -266,6 +272,7 @@ public class LinkedBlockingQueue<E> extends AbstractQueue<E>
 ---
 
 - 构造方法摘要
+
 ```
 LinkedBlockingQueue() 
           创建一个容量为 Integer.MAX_VALUE 的 LinkedBlockingQueue。
@@ -276,6 +283,7 @@ LinkedBlockingQueue(int capacity)
 ```
 
 - 方法摘要
+
 ```
  void	clear() 
           从队列彻底移除所有元素。
@@ -312,6 +320,7 @@ LinkedBlockingQueue(int capacity)
 ---
 
 - 案例
+
 ```java
 import org.junit.Test;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -447,6 +456,7 @@ public class PriorityBlockingQueue<E> extends AbstractQueue<E>
 ---
 
 - 构造方法摘要
+
 ```
 PriorityBlockingQueue() 
           用默认的初始容量 (11) 创建一个 PriorityBlockingQueue，并根据元素的自然顺序对其元素进行排序。
@@ -459,6 +469,7 @@ PriorityBlockingQueue(int initialCapacity, Comparator<? super E> comparator)
 ```
 
 - 方法摘要
+
 ```
  boolean	add(E e) 
           将指定元素插入此优先级队列。
@@ -501,6 +512,7 @@ PriorityBlockingQueue(int initialCapacity, Comparator<? super E> comparator)
 ```
 
 - 案例
+
 ```java
 package collection.queue.block_queue;
 
@@ -638,6 +650,7 @@ public class SynchronousQueue<E> extends AbstractQueue<E>
 --- 
 
 - 构造方法摘要
+
 ```
 SynchronousQueue() 
           创建一个具有非公平访问策略的 SynchronousQueue。
@@ -646,6 +659,7 @@ SynchronousQueue(boolean fair)
 ```
 
 - 方法摘要
+
 ```
  void	clear() 
           不执行任何操作。
@@ -780,6 +794,7 @@ Delayed 元素的一个无界阻塞队列，只有在延迟期满时才能从中
 ---
 
 - 构造方法摘要
+
 ```
 DelayQueue() 
           创建一个最初为空的新 DelayQueue。
@@ -788,6 +803,7 @@ DelayQueue(Collection<? extends E> c)
 ```
 
 - 方法摘要
+
 ```
  boolean	add(E e) 
           将指定元素插入此延迟队列中。
