@@ -98,10 +98,13 @@ ArrayBlockingQueue(int capacity)
 ArrayBlockingQueue(int capacity, boolean fair) 
           创建一个具有给定的（固定）容量和指定访问策略的 ArrayBlockingQueue。
 ArrayBlockingQueue(int capacity, boolean fair, Collection<? extends E> c) 
-          创建一个具有给定的（固定）容量和指定访问策略的 ArrayBlockingQueue，它最初包含给定 collection 的元素，并以 collection 迭代器的遍历顺序添加元素。
+          创建一个具有给定的（固定）容量和指定访问策略的 ArrayBlockingQueue，
+          它最初包含给定 collection 的元素，并以 collection 迭代器的遍历顺序添加元素。
 ```
 
+
 - 方法摘要
+
 
 ```
  boolean	add(E e) 
@@ -138,6 +141,7 @@ ArrayBlockingQueue(int capacity, boolean fair, Collection<? extends E> c)
           返回一个按适当顺序包含此队列中所有元素的数组。
  <T> T[]     toArray(T[] a) 
           返回一个按适当顺序包含此队列中所有元素的数组；返回数组的运行时类型是指定数组的运行时类型。
+
 ```
 
 ---
