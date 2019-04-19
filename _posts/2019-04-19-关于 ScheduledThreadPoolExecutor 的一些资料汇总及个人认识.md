@@ -139,6 +139,7 @@ ThreadPoolExecutor，它可另行安排在给定的延迟后运行命令，或�
 
 schedule(Runnable command, long delay, TimeUnit unit) 方法只能做给定时间的延迟任务，且仅执行一次；
 
+```$xslt
 scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit) 
 和
 scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit) 
@@ -146,6 +147,8 @@ scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit
 区别是：
 scheduleAtFixedRate -> 每次执行的开始时刻相差 : period * TimeUnit
 scheduleWithFixedDelay -> 每次执行的开始时刻相差 : period * TimeUnit + run()方法执行时间
+```
+
 
 
 ## 3.个人实践
