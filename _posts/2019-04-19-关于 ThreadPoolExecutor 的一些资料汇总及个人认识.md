@@ -19,14 +19,18 @@ tags:
 ## 1.资料汇总
 
 ```java
+
 /**
  * @since 1.5
  * @author Doug Lea
  */
 public class ThreadPoolExecutor extends AbstractExecutorService {
+    // ...
+}
 ```
 
 - 构造方法
+
 ```
 ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue) 
 用给定的初始参数和默认的线程工厂及被拒绝的执行处理程序创建新的 ThreadPoolExecutor。 
@@ -42,6 +46,7 @@ ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, Ti
 ```
 
 - 参数说明
+
 ```
 corePoolSize - 池中所保存的线程数，包括空闲线程。
 maximumPoolSize - 池中允许的最大线程数。
@@ -53,12 +58,14 @@ handler - (拒绝策略)由于超出线程范围和队列容量而使执行被�
 ```
 
 - 抛出异常
+
 ```
 IllegalArgumentException - 如果 corePoolSize 或 keepAliveTime 小于 0，或者 maximumPoolSize 小于等于 0，或者 corePoolSize 大于 maximumPoolSize。 
 NullPointerException - 如果 workQueue、threadFactory 或 handler 为 null。
 ```
 
 - 核心概念
+
 ```
 1.核心和最大池大小 
 ThreadPoolExecutor 将根据 corePoolSize 和 maximumPoolSize 设置的边界自动调整池大小。当新任务在方法 execute(java.lang.Runnable) 中提交时，如果运行的线程少于 corePoolSize，则创建新线程来处理请求，即使其他辅助线程是空闲的。如果运行的线程多于 corePoolSize 而少于 maximumPoolSize，则仅当队列满时才创建新线程。如果设置的 corePoolSize 和 maximumPoolSize 相同，则创建了固定大小的线程池。如果将 maximumPoolSize 设置为基本的无界值（如 Integer.MAX_VALUE），则允许池适应任意数量的并发任务。在大多数情况下，核心和最大池大小仅基于构造来设置，不过也可以使用 setCorePoolSize(int) 和 setMaximumPoolSize(int) 进行动态更改。
@@ -102,13 +109,14 @@ ThreadPoolExecutor 将根据 corePoolSize 和 maximumPoolSize 设置的边界自
 ```
 
 ## 2.个人理解
+
 以下内容纯属个人理解，若有误，请指教：
 
-1. 最初
+#### 1. 最初
 
 刚创建线程池时，线程池中的`线程资源数`为 0 ；
 
-2. 提交任务
+#### 2. 提交任务
 
 执行 execute(Runnable command) 提交任务时，当 线程池中的`线程资源数` 小于 `核心线程数(corePoolSize)` 时，创建新线程并放入线程池。
 若指定了 线程工厂类（ThreadFactory），则使用指定的 ThreadFactory 创建新线程；若没有指定，使用默认的线程工厂（Executors.defaultThreadFactory()）创建新线程。
@@ -171,14 +179,14 @@ LinkedBlockingQueue queue = new LinkedBlockingQueue();
     }
 ```
 
-3. 任务队列已无剩余空间
+#### 3. 任务队列已无剩余空间
 
 执行 execute(Runnable command) 提交任务时，当`核心线程`全部未处在空闲时期，且`任务队列`已无剩余空间；
 
 若 指定`最大线程数`（maximumPoolSize） > 核心线程数（corePoolSize）：
 则会通过`线程工厂`继续创建线程并放入线程池；
 
-4. 拒绝任务
+#### 4. 拒绝任务
 
 执行 execute(Runnable command) 提交任务时：
 `核心线程`全部未处在空闲时期；
@@ -199,7 +207,8 @@ public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {
 }
 ```
 
-5. 当线程池池空闲下来后
+#### 5. 当线程池池空闲下来后
+
 因临时需要扩展出来的线程（最大线程数 - 核心线程数）会被释放。
 
 最佳实践就是指定 `核心线程数` 等于 `最大线程数`，则不会因为重复的创建、销毁线程浪费系统资源。
