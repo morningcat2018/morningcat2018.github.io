@@ -59,8 +59,10 @@ db.student.insert({"sid":"S2012211598","name":"cat","age":25})
 
 ## Springboot测试
 
-1. 新建SpringBoot工程
-2. 添加maven依赖
+#### 1. 新建SpringBoot工程
+
+#### 2. 添加maven依赖
+
 ```
  <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -72,7 +74,9 @@ db.student.insert({"sid":"S2012211598","name":"cat","age":25})
     <scope>test</scope>
 </dependency>
 ```
-3. application.properties
+
+#### 3. application.properties
+
 ```
 spring.data.mongodb.host=localhost
 spring.data.mongodb.password=
@@ -80,7 +84,9 @@ spring.data.mongodb.port=27017
 spring.data.mongodb.database=test
 spring.data.mongodb.repositories.type=auto
 ```
-4. 添加`EnableMongoRepositories`注解
+
+#### 4. 添加`EnableMongoRepositories`注解
+
 ```
 @SpringBootApplication
 @EnableMongoRepositories(basePackages = "morning.cat.springdatademo.mongo.repository")
@@ -89,8 +95,11 @@ public class SpringdataDemoApplication {
         SpringApplication.run(SpringdataDemoApplication.class, args);
     }
 }
+
 ```
-5. 定义实体类
+
+#### 5. 定义实体类
+
 ```
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -104,13 +113,17 @@ public class Student {
     private Integer age;
 }
 ```
-6. 继承`MongoRepository`类
+
+#### 6. 继承`MongoRepository`类
+
 ```
 public interface StudentRepository extends MongoRepository<Student, Long> {
     Student findBySid(String code);
 }
 ```
-7. 测试类
+
+#### 7. 测试类
+
 ```
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -131,4 +144,6 @@ public class BaseTests {
 
 }
 ```
-8. 使用`MongoChef`客户端查看数据
+
+#### 8. 使用`MongoChef`客户端查看数据
+
