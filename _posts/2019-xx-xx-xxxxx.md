@@ -2,9 +2,9 @@
 layout:     post
 title:      xxxxx
 subtitle:   xxxxx
-date:       2019-02-13
+date:       2019-xx-xx
 author:     BY morningcat
-header-img: img/20190213/top_2019_Space.jpg
+header-img: img/2019xxxx/xxx
 catalog: true
 tags:
     - xxxxx
