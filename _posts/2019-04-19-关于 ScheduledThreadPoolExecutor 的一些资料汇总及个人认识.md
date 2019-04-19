@@ -234,7 +234,7 @@ public class ScheduledThreadPoolExecutorTest {
 
     private static void printTime() {
         try {
-            Thread.sleep(2900);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
