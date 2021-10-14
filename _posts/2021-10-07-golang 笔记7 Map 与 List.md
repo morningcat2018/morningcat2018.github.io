@@ -10,11 +10,11 @@ tags:
     - golang 学习笔记
 ---
 
-# golang 笔记7 Map 与 List
+# Map 与 List
 
 ## map
 
-1. map(string,int)
+#### 1. map(string,int)
 
 ```go
 
@@ -60,7 +60,7 @@ PASS
  */
 ```
 
-2. map(string,int) 数组
+#### 2. map(string,int) 数组
 
 ```go
 func TestMap2(t *testing.T) {
@@ -76,7 +76,7 @@ func TestMap2(t *testing.T) {
 }
 ```
 
-3. map(string,[]int)
+#### 3. map(string,[]int)
 
 ```go
 func TestMap3(t *testing.T) {
@@ -89,7 +89,7 @@ func TestMap3(t *testing.T) {
 
 ## list
 
-1. 基础
+#### 1. 基础
 
 ```go
 
@@ -187,7 +187,7 @@ PASS
  */
 ```
 
-> InsertAfter InsertBefore MoveToBack MoveToFront
+#### 2.InsertAfter InsertBefore MoveToBack MoveToFront
 
 ```go
 func TestList2(t *testing.T) {

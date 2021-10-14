@@ -10,12 +10,9 @@ tags:
     - golang 学习笔记
 ---
 
-# golang 笔记2 Go 与 Java 语法上的区别
+# Go 与 Java 语法上的区别
 
-
-##  区别
-
-1. 结尾无需使用 ; 
+## 1. 结尾无需使用 ; 
 
 ```go
 strValue := "hello world"
@@ -24,7 +21,7 @@ fmt.Println(strValue)
 
 
 
-2. 定义的局部变量必须使用
+## 2. 定义的局部变量必须使用
 
 仅声明一个局部变量却不使用，无法通过编译
 
@@ -35,13 +32,13 @@ func fun1() {
 }
 ```
 
-3. 变量类型在变量名后面
+## 3. 变量类型在变量名后面
 
 ```go
 var strValue string = "hello world"
 ```
 
-4. 函数返回值在函数名后面
+## 4. 函数返回值在函数名后面
 
 ```go
 func hello(name string) string {
@@ -49,7 +46,7 @@ func hello(name string) string {
 }
 ```
 
-5. 多返回值
+## 5. 多返回值
 
 ```go
 // 函数可以返回任意数量的返回值
@@ -63,7 +60,7 @@ func main() {
 }
 ```
 
-6. if 判断无需括号
+## 6. if 判断无需括号
 
 ```go
 if count >= 60 {
@@ -71,7 +68,7 @@ if count >= 60 {
 }
 ```
 
-7. 无需某个返回值，可用下划线替代
+## 7. 无需某个返回值，可用下划线替代
 
 ```go
 // 字符串遍历
@@ -82,10 +79,10 @@ for _, value := range s1 {
 }
 ```
 
-99. 支持闭包
+## 99. 支持闭包
 
 [GoLang 闭包实践](https://blog.csdn.net/u013837825/article/details/114649547)
 
-100. 未完待续
+## 100. 未完待续
 
 
