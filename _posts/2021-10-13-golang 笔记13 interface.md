@@ -10,9 +10,9 @@ tags:
     - golang 学习笔记
 ---
 
-# golang 笔记13 interface
+# interface
 
-1. interface 基础
+## 1. interface 基础
 
 > 一个变量如果实现了接口中定义的所有方法 那么这个变量可以理解为这种接口类型的变量
 
@@ -60,7 +60,7 @@ func TestInterfaceDemo1(t *testing.T) {
 }
 ```
 
-2. 空接口
+## 2. 空接口
 
 ```go
 // interface{} 空接口类型
@@ -89,7 +89,7 @@ func BlankInterfaceDemo3() {
 }
 ```
 
-3. 类型断言
+## 3. 类型断言
 
 ```go
 
