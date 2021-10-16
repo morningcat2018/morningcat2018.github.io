@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/20190304/post-bg-unix-linux.jpg
 catalog: true
 tags:
-    - 分布式
+    - java框架
 ---
 
 ## xxl-job 入门实践记录

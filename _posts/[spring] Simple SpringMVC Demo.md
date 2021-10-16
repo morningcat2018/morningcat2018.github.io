@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
 catalog: true
 tags:
-    - spring mvc
+    - spring
 ---
 
 曾几何时，认为手动搭建一个SpringMVC工程很困难，其实去除那些繁枝末节，仅保留最核心的东西，看看还剩下什么？
