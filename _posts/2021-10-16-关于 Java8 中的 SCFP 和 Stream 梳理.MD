@@ -4,13 +4,13 @@ title:      关于 Java8 中的 SCFP 和 Stream 梳理
 subtitle:   
 date:       2019-11-12
 author:     BY morningcat
-header-img: img/201904/UNADJUSTEDNONRAW_thumb_65d.jpg
+header-img: img/201904/UNADJUSTEDNONRAW_thumb_637.jpg
 catalog: true
 tags:
     - java8
 ---
 
-# SCFP
+# 1. SCFP
 
 - Supplier
 - Consumer
@@ -27,7 +27,7 @@ public interface Supplier<T> {
 }
 ```
 
-### Supplier 扩展
+#### Supplier 扩展
 
 - BooleanSupplier 提供Boolean
 - DoubleSupplier 提供Double
@@ -66,7 +66,7 @@ public interface LongSupplier {
 }
 ```
 
-### Supplier 实践
+#### Supplier 实践
 
 ```java
         Supplier<String> supplier = () -> {
@@ -97,7 +97,7 @@ public interface Consumer<T> {
 }
 ```
 
-### Consumer 拓展
+#### Consumer 拓展
 
 - BiConsumer 同时消费两个入参
 - DoubleConsumer
@@ -145,7 +145,7 @@ public interface ObjDoubleConsumer<T> {
 }
 ```
 
-### Consumer 实践
+#### Consumer 实践
 
 ```java
 
@@ -207,7 +207,7 @@ public interface Predicate<T> {
 
 ```
 
-### Predicate 拓展
+#### Predicate 拓展
 
 - BiPredicate 两个入参进行判断
 - DoublePredicate
@@ -258,7 +258,7 @@ public interface DoublePredicate {
 }
 ```
 
-### Predicate 实践
+#### Predicate 实践
 
 ```java
 
@@ -311,7 +311,7 @@ public interface Function<T, R> {
 
 ```
 
-### Function 实践
+#### Function 实践
 
 ```java
     @Getter
@@ -345,7 +345,7 @@ public interface Function<T, R> {
     // 2012211598
 ```
 
-### Function 拓展 
+#### Function 拓展 
 
 - DoubleFunction
 - DoubleToIntFunction
@@ -410,7 +410,7 @@ public interface ToDoubleBiFunction<T, U> {
 }
 ```
 
-### XxxOperator
+#### XxxOperator
 
 - UnaryOperator
 - DoubleUnaryOperator
@@ -513,7 +513,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
 
 ## 创建
 
-### Stream.java
+#### Stream.java
 
 ```java
     public static<T> Stream<T> empty() {
@@ -569,7 +569,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
 
 ```
 
-### Collection.java
+#### Collection.java
 
 ```java
     default Stream<E> stream() {
@@ -581,7 +581,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
     }
 ```
 
-### Arrays.java
+#### Arrays.java
 
 ```java
     public static <T> Stream<T> stream(T[] array) {
@@ -596,7 +596,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
 
 ## 中间操作
 
-### 映射(转换)
+#### 映射(转换)
 
 ```java
    <R> Stream<R> map(Function<? super T, ? extends R> mapper);
@@ -616,7 +616,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
    DoubleStream flatMapToDouble(Function<? super T, ? extends DoubleStream> mapper);
 ```
 
-### 排序
+#### 排序
 
 ```java
     Stream<T> sorted();
@@ -677,7 +677,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
         Stream<Student> stream4 = stream1.sorted(Comparator.comparingInt(Student::getAge).reversed());
 ```
 
-### 切片
+#### 切片
 
 ```java
     // 截取前N个元素
@@ -687,19 +687,19 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
     Stream<T> skip(long n);
 ```
 
-### 筛选
+#### 筛选
 
 ```java
     Stream<T> filter(Predicate<? super T> predicate);
 ```
 
-### 去重
+#### 去重
 
 ```java
     Stream<T> distinct();
 ```
 
-### peek
+#### peek
 
 ```java
     Stream<T> peek(Consumer<? super T> action);
@@ -716,7 +716,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
 
 ## 终止操作
 
-### 遍历
+#### 遍历
 
 ```java
     void forEach(Consumer<? super T> action);
@@ -724,7 +724,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
     void forEachOrdered(Consumer<? super T> action);
 ```
 
-### 查找
+#### 查找
 
 
 ```java
@@ -739,7 +739,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
     Optional<T> max(Comparator<? super T> comparator);
 ```
 
-### 匹配
+#### 匹配
 
 
 ```java
@@ -755,7 +755,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
 
 
 
-### 归约
+#### 归约
 
 
 ```java
@@ -769,7 +769,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
 
 ```
 
-### 转换
+#### 转换
 
 ```java
     Object[] toArray();
@@ -777,7 +777,7 @@ public interface BaseStream<T, S extends BaseStream<T, S>>
     <A> A[] toArray(IntFunction<A[]> generator);
 ```
 
-### collect
+#### collect
 
 
 ```java
@@ -960,7 +960,3 @@ https://blog.csdn.net/u013837825/article/details/87191393#44__collect_280
     }
 ```
 
-```java
-
-
-```
