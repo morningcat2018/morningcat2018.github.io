@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/201904/UNADJUSTEDNONRAW_thumb_637.jpg
 catalog: true
 tags:
-    - java8
+    - java
 ---
 
 - [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/index.html)
