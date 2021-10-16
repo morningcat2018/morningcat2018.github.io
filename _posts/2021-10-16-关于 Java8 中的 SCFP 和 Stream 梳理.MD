@@ -474,7 +474,7 @@ public interface DoubleBinaryOperator {
 }
 ```
 
-# Stream API
+# 2. Stream API
 
 ## 基础
 
