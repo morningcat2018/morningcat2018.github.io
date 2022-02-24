@@ -37,7 +37,7 @@ team 为精确查询
 
 #### 案例1
 
-```xml
+```
 GET blog/_doc/_search
 {"query":{"term":{"title":"安"}}}
 

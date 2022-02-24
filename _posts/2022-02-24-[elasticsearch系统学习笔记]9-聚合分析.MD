@@ -35,7 +35,7 @@ tags:
 
 #### 数据准备
 
-```json
+```
 PUT /books
 {
     "mappings": {
@@ -69,7 +69,7 @@ PUT /books
 }
 ```
 
-```json
+```
 POST /books/_doc/_bulk
 {"index":{"_id":1}}
 {"name":"C语言编程","price":23.5,"type":"c"}

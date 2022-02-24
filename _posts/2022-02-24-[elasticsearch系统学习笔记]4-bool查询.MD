@@ -27,7 +27,7 @@ tags:
 
 ## bool 语法结构
 
-```json
+```
 GET /{索引名}/_search
 {
   "query": {
@@ -65,7 +65,11 @@ GET /order_v2/_search
 }
 ```
 
-select * from order_v2 where order_no = "202003131209120999" and shop_id = 123
+```sql
+select * from order_v2 
+where order_no = "202003131209120999" 
+and shop_id = 123
+```
 
 #### must_not
 
@@ -91,7 +95,10 @@ GET /order_v2/_search
 }
 ```
 
-select * from order_v2 where shop_id != 1 and shop_id != 2
+```sql
+select * from order_v2 
+where shop_id != 1 and shop_id != 2
+```
 
 #### should
 
@@ -116,7 +123,7 @@ GET /order_v2/_search{
 }
 ```
 
-select * from order_v2 where order_no = "001" or order_no = "002"
+> select * from order_v2 where order_no = "001" or order_no = "002"
 
 ---
 
@@ -156,7 +163,7 @@ GET /order_v2/_search
 }
 ```
 
-select * from order_v2 where (order_no = '003' and shop_id = 333) or tag in (1,2)
+> select * from order_v2 where (order_no = '003' and shop_id = 333) or tag in (1,2)
 
 #### minimum_should_match
 
@@ -223,5 +230,5 @@ GET /index_name/_doc_/_search
 }
 ```
 
-SELECT * FROM table_a WHERE  (cityCode = 001) AND (houseId = 1087599828743 OR resblockName like "%团%")
+> SELECT * FROM table_a WHERE  (cityCode = 001) AND (houseId = 1087599828743 OR resblockName like "%团%")
 

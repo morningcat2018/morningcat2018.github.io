@@ -14,7 +14,7 @@ tags:
 [资料来源](https://www.elastic.co/guide/cn/elasticsearch/guide/current/_aggregation_test_drive.html)
 
 ## 1. 准备数据
-```json
+```
 PUT /cars_transactions
 {
     "mappings": {
@@ -44,7 +44,7 @@ PUT /cars_transactions
 }
 ```
 
-```json
+```
 POST /cars_transactions/_doc/_bulk
 { "index": {}}
 { "price" : 10000, "color" : "red", "make" : "honda", "sold" : "2014-10-28" }
@@ -66,7 +66,7 @@ POST /cars_transactions/_doc/_bulk
 
 ## 2. 基本聚合
 
-```json
+```
 GET /cars_transactions/_doc/_search
 {
     "size" : 0,
@@ -87,7 +87,7 @@ GET /cars_transactions/_doc/_search
 4. 聚合是在特定搜索结果背景下执行的， 这也就是说它只是查询请求的另外一个顶层参数（例如，使用 /_search 端点）。 聚合可以与查询结对
 5. 可能会注意到我们将 size 设置成 0 。我们并不关心搜索结果的具体内容，所以将返回记录数设置为 0 来提高查询速度
 
-```json
+```
 {
   "took": 7,
   "timed_out": false,
@@ -134,7 +134,7 @@ GET /cars_transactions/_doc/_search
 
 ## 3. 添加度量指标
 
-```json
+```
 GET /cars_transactions/_doc/_search
 {
    "size" : 0,
@@ -160,7 +160,7 @@ GET /cars_transactions/_doc/_search
 2. 为度量指定名字： avg_price 。
 3. 最后，为 price 字段定义 avg 度量。
 
-```json
+```
 {
   "took": 8,
   "timed_out": false,
@@ -211,7 +211,7 @@ GET /cars_transactions/_doc/_search
 > 在我们使用不同的嵌套方案时，聚合的力量才能真正得以显现
 令人激动的分析来自于将桶嵌套进 另外一个桶 所能得到的结果
 
-```json
+```
 GET /cars_transactions/_doc/_search
 {
    "size" : 0,
@@ -242,7 +242,7 @@ GET /cars_transactions/_doc/_search
 3. 这个聚合是 terms 桶，它会为每个汽车制造商生成唯一的桶。
 4. `一个聚合的每个 层级 都可以有多个 度量 或 桶`
 
-```json
+```
 {
   "took": 1,
   "timed_out": false,
@@ -337,7 +337,7 @@ GET /cars_transactions/_doc/_search
 
 ## 5. 最后的修改
 
-```json
+```
 GET /cars_transactions/_doc/_search
 {
    "size" : 0,

@@ -38,7 +38,7 @@ https://github.com/medcl/elasticsearch-analysis-ik
 ---
 
 测试：
-```json
+```
 GET /_analyze
 {
   "text": "中华人民共和国国歌",
@@ -65,7 +65,7 @@ GET /_analyze
 }
 ```
 
-```json
+```
 GET /_analyze
 {
   "text": "中华人民共和国国歌",
@@ -187,7 +187,7 @@ https://github.com/KennFalcon/elasticsearch-analysis-hanlp/releases/tag/v6.3.2
 
 测试：
 
-```json
+```
 GET /_analyze
 {
   "text": "中华人民共和国国歌",
@@ -214,7 +214,7 @@ GET /_analyze
 }
 ```
 
-```json
+```
 GET /_analyze
 {
   "text": "中华人民共和国国歌",
@@ -243,7 +243,7 @@ https://github.com/medcl/elasticsearch-analysis-pinyin
 
 启动窗口加载日志会多出一些加载插件的信息：[YABPFPe] loaded plugin [analysis-pinyin]
 
-```json
+```
 GET /_analyze
 {
   "text": "中华民族",

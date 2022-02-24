@@ -22,7 +22,7 @@ PUT /{index}/{type}/{id}
 ```
 
 例子：
-```json
+```
 PUT /order/_doc/1
 {
   "id": 1,
@@ -59,7 +59,7 @@ DELETE /order/_doc/1
 
 1. 查询基本语法结构
 
-```json
+```
 GET /{索引名}/_search
 {
 	"from" : 0,  // 返回搜索结果的开始位置
@@ -77,7 +77,7 @@ GET /{索引名}/_search
 
 
 查询语句，返回的JSON数据格式如下
-```json
+```
 {
     "took": 5, // 查询消耗时间，单位毫秒 
     "timed_out": false, // 查询是否超时
@@ -114,7 +114,7 @@ GET /order/_search
 
 结果数据只返回 _source 标注的字段值
 
-```json
+```
 GET /order/_search
 {
   "_source": [
@@ -127,7 +127,7 @@ GET /order/_search
 ### sort
 
 语法：
-```json
+```
 GET /{索引名}/_search
 {
   "query": {
@@ -150,7 +150,7 @@ GET /{索引名}/_search
 ```
 
 例子:
-```json
+```
 GET /order/_search
 {
   "query": {
@@ -175,7 +175,7 @@ GET /order/_search
 
 2. 匹配单个字段 match
 
-```json
+```
 GET /{索引名}/_search
 {
     "query": {
@@ -192,7 +192,7 @@ GET /{索引名}/_search
 
 精确匹配是指等值匹配，不需要进行分词处理，例如：订单号、手机号、时间字段
 
-```json
+```
 GET /{索引名}/_search
 {
     "query": {
@@ -205,12 +205,13 @@ GET /{索引名}/_search
 
 类似： 
 ```sql
-select * from order_v2 where order_no = "202003131209120999"
+select * from order_v2 
+where order_no = "202003131209120999"
 ```
 
 4. 包含 terms
 
-```json
+```
 GET /{索引名}/_search
 {
     "query": {
@@ -224,12 +225,13 @@ GET /{索引名}/_search
 
 类似： 
 ```sql
-select * from order_v2 where shop_id in (123,100,300)
+select * from order_v2 
+where shop_id in (123,100,300)
 ```
 
 5. 范围匹配 range
 
-```json
+```
 GET /{索引名}/_search
 {
   "query": {
@@ -252,7 +254,8 @@ GET /{索引名}/_search
 
 类似：
 ```sql
- select * from order_v2 where shop_id >= 10 and shop_id <= 20
+ select * from order_v2 
+ where shop_id >= 10 and shop_id <= 20
  ```
 
 6. exists missing
@@ -260,7 +263,7 @@ GET /{索引名}/_search
 exists 相当于SQL中的 IS NOT NULL
 missing 相当于 IS NULL
 
-```json
+```
 GET /{索引名}/_search
 {
     "query": {
@@ -272,14 +275,15 @@ GET /{索引名}/_search
 ```
 
 ```sql
-select * from table_a where title is not null
+select * from table_a 
+where title is not null
 ```
 
 7. multi_match
 
 多值匹配
 
-```json
+```
 GET /{索引名}/_search
 {
     "query": {
@@ -292,7 +296,8 @@ GET /{索引名}/_search
 ```
 
 ```sql
-select * from table_a where title like "%团%" or desc like "%团%"
+select * from table_a 
+where title like "%团%" or desc like "%团%"
 ```
 
 

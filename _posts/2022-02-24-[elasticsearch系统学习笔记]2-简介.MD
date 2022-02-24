@@ -60,7 +60,7 @@ tags:
 - _primary_term  文档所在主分区，这个可以跟 _seq_no 字段搭配实现乐观锁
 - _source 数据主体内容
 
-```json
+```
 // es6.3.2 文档
 {
   "_index": "test",
@@ -88,7 +88,7 @@ tags:
 1. 查询映射规则
 > GET test/_mapping
 
-```json
+```
 {
   "test": {
     "mappings": {
@@ -140,7 +140,7 @@ tags:
 
 当我们没有预先定义文档的映射，在插入数据时系统会自动检测我们插入的数据类型，相当于自动定义文档类型(mapping)；
 
-```json
+```
 POST test2/_doc/1
 {
   "name": "zhang san",
@@ -214,7 +214,7 @@ result:
 
 创建ES索引
 
-```json
+```
 PUT /order
 {
   "mappings": {
