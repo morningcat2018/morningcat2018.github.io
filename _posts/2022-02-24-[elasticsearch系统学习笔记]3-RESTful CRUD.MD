@@ -57,7 +57,7 @@ DELETE /order/_doc/1
 
 ## Query DSL
 
-1. 查询基本语法结构
+#### 1. 查询基本语法结构
 
 ```
 GET /{索引名}/_search
@@ -97,7 +97,7 @@ GET /{索引名}/_search
 }
 ```
 
-### 分页
+#### 2.分页
 
 - from 开始位置
 - size 当前页大小
@@ -110,7 +110,7 @@ GET /order/_search
 }
 ```
 
-### _source
+#### 3._source
 
 结果数据只返回 _source 标注的字段值
 
@@ -124,7 +124,7 @@ GET /order/_search
 }
 ```
 
-### sort
+#### 4.sort
 
 语法：
 ```
@@ -171,9 +171,7 @@ GET /order/_search
 }
 ```
 
-### query
-
-2. 匹配单个字段 match
+#### 5. 匹配单个字段 match
 
 ```
 GET /{索引名}/_search
@@ -188,7 +186,7 @@ GET /{索引名}/_search
 
 如果 {FIELD} 字段的数据类型是 text 类型，搜索关键词会进行分词处理
 
-3. 精确匹配 term
+#### 6. 精确匹配 term
 
 精确匹配是指等值匹配，不需要进行分词处理，例如：订单号、手机号、时间字段
 
@@ -209,7 +207,7 @@ select * from order_v2
 where order_no = "202003131209120999"
 ```
 
-4. 包含 terms
+#### 7. 包含 terms
 
 ```
 GET /{索引名}/_search
@@ -229,7 +227,7 @@ select * from order_v2
 where shop_id in (123,100,300)
 ```
 
-5. 范围匹配 range
+#### 8. 范围匹配 range
 
 ```
 GET /{索引名}/_search
@@ -258,7 +256,7 @@ GET /{索引名}/_search
  where shop_id >= 10 and shop_id <= 20
  ```
 
-6. exists missing
+#### 9. exists missing
 
 exists 相当于SQL中的 IS NOT NULL
 missing 相当于 IS NULL
@@ -279,7 +277,7 @@ select * from table_a
 where title is not null
 ```
 
-7. multi_match
+#### 10. multi_match
 
 多值匹配
 
