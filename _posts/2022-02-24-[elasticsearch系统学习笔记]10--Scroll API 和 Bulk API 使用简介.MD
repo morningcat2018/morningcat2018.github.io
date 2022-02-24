@@ -26,7 +26,7 @@ in much the same way as you would use a cursor on a traditional database.
 
 使用[elasticsearch系统学习笔记9-聚合分析 Aggregations](https://blog.csdn.net/u013837825/article/details/122904298)中的数据：books 索引
 
-```json
+```
 POST /books/_search?scroll=1m
 {
   "size": 3,
@@ -40,7 +40,7 @@ POST /books/_search?scroll=1m
 - 1m 表示1分钟， scroll=1m ：tells Elasticsearch to keep the search context open for another 1m.
 - size 每次 scroll 查询返回的数据数量，包含首次查询
 
-```json
+```
 {
   "_scroll_id": "DnF1ZXJ5VGhlbkZldGNoBQAAAAAAAAA2FllBQlBGUGVuUTJTalBhUVJSc1FlQmcAAAAAAAAANxZZQUJQRlBlblEyU2pQYVFSUnNRZUJnAAAAAAAAADgWWUFCUEZQZW5RMlNqUGFRUlJzUWVCZwAAAAAAAAA5FllBQlBGUGVuUTJTalBhUVJSc1FlQmcAAAAAAAAAOhZZQUJQRlBlblEyU2pQYVFSUnNRZUJn",
   "took": 0,
@@ -96,7 +96,7 @@ POST /books/_search?scroll=1m
 - _scroll_id 下面的迭代请求会一直用到
 - 会返回首次的结果数据
 
-```json
+```
 POST /_search/scroll 
 {
     "scroll" : "1m", 
@@ -107,7 +107,7 @@ POST /_search/scroll
 - scroll 继续保持连接一分钟，超过这个时间再使用 _search/scroll 会报错
 - scroll_id 即 上面的 _scroll_id 的结果
 
-```json
+```
 {
   "_scroll_id": "DnF1ZXJ5VGhlbkZldGNoBQAAAAAAAAA2FllBQlBGUGVuUTJTalBhUVJSc1FlQmcAAAAAAAAANxZZQUJQRlBlblEyU2pQYVFSUnNRZUJnAAAAAAAAADgWWUFCUEZQZW5RMlNqUGFRUlJzUWVCZwAAAAAAAAA5FllBQlBGUGVuUTJTalBhUVJSc1FlQmcAAAAAAAAAOhZZQUJQRlBlblEyU2pQYVFSUnNRZUJn",
   "took": 1,
@@ -163,7 +163,7 @@ POST /_search/scroll
 - 就这样每次请求都会按照最初给定的 size 返回数据
 - 当请求到最后没有数据可返回时，hits 会响应空数组
 
-```json
+```
 {
   "_scroll_id": "DnF1ZXJ5VGhlbkZldGNoBQAAAAAAAAA2FllBQlBGUGVuUTJTalBhUVJSc1FlQmcAAAAAAAAANxZZQUJQRlBlblEyU2pQYVFSUnNRZUJnAAAAAAAAADgWWUFCUEZQZW5RMlNqUGFRUlJzUWVCZwAAAAAAAAA5FllBQlBGUGVuUTJTalBhUVJSc1FlQmcAAAAAAAAAOhZZQUJQRlBlblEyU2pQYVFSUnNRZUJn",
   "took": 1,
@@ -190,7 +190,7 @@ scroll 超时时，搜索上下文将自动删除。
 但是，保持 scroll 打开是有代价的，
 因此一旦不再使用 scroll ，就应使用 clear scroll API 明确清除 scroll ：
 
-```json
+```
 DELETE /_search/scroll
 {
     "scroll_id" : "xxx"
@@ -278,7 +278,7 @@ public class ScrollDemo {
 
 #### 批量插入
 
-```json
+```
 POST _bulk
 { "index" : { "_index" : "test", "_type" : "_doc", "_id" : "1" } }
 { "field1" : "value1" }
@@ -301,7 +301,7 @@ POST /test/_doc/_bulk
 
 #### 批量混合操作
 
-```json
+```
 POST _bulk
 { "index" : { "_index" : "test", "_type" : "_doc", "_id" : "1" } }
 { "field1" : "value1" }
