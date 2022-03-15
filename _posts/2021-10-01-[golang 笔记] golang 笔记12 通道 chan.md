@@ -1,0 +1,135 @@
+---
+layout:     post
+title:      golang 笔记12
+subtitle:   通道 chan
+date:       2021-10-12
+author:     BY morningcat
+header-img: img/201904/UNADJUSTEDNONRAW_thumb_65d.jpg
+catalog: true
+tags:
+    - golang 学习笔记
+---
+
+# 通道 chan
+
+## 1. 双向通道与单向管道
+
+```go
+import (
+	"fmt"
+	"math/rand"
+	"testing"
+	"time"
+)
+
+/**
+chan int   双向通道
+chan<- int 单向通道 只发
+<-chan int 单向通道 只收
+*/
+func producer(producerName string, count int, pipe chan<- string) { // 单向通道
+	for i := 0; i < count; i++ {
+		pipe <- fmt.Sprintf("[%s %v]", producerName, rand.Int31()) // 向管道内发送数据
+	}
+}
+
+func consumer(consumerName string, pipe <-chan string) {
+	for {
+		message := <-pipe // 从管道内接收数据
+		fmt.Printf("%s:%s\n", consumerName, message)
+	}
+}
+
+func node1(chanName chan string) { // 双向通道
+	chanName <- "hello channel" // 将字符串 "hello world" 输送到管道里
+}
+
+func node2(chanName chan string, content string) {
+	chanName <- content
+}
+
+func node3(chanName chan string) {
+	x := <-chanName // 从管道里获取数据
+	fmt.Println("node3:", x)
+}
+
+func TestChannel(t *testing.T) {
+	// 创建通道
+	pipe := make(chan string)
+	go producer("生产者A", 2, pipe)
+	go producer("生产者B", 5, pipe)
+	time.Sleep(time.Millisecond)
+	go consumer("消费者1", pipe)
+	go consumer("消费者2", pipe)
+	go consumer("消费者3", pipe)
+	node1(pipe)
+	node2(pipe, "国庆节")
+	go node3(pipe)
+	time.Sleep(time.Second * 1)
+}
+
+```
+
+## 2. 使用 chan 通信
+
+```go
+var wait sync.WaitGroup
+var pipe chan bool = make(chan bool)
+
+func f1() {
+	defer wait.Done() // -1
+F1:
+	for {
+		fmt.Println("hello world")
+		time.Sleep(time.Millisecond * 500)
+		select {
+		case <-pipe:
+			break F1
+		default:
+			// nothing to do
+		}
+	}
+	fmt.Println("f1 over")
+	time.Sleep(time.Second * 2)
+}
+
+func TestChan1(t *testing.T) {
+	wait.Add(1)
+	go f1()
+	time.Sleep(time.Second * 5)
+	pipe <- true // 发送通知
+	wait.Wait()
+	fmt.Println("main over")
+}
+```
+
+## 3. 使用 context.Context 发送通知
+
+```go
+func f2(ctx context.Context) {
+	defer wait.Done() // -1
+F1:
+	for {
+		fmt.Println("hello world")
+		time.Sleep(time.Millisecond * 500)
+		select {
+		case <-ctx.Done():
+			break F1
+		default:
+			// nothing to do
+		}
+	}
+	fmt.Println("f1 over")
+	time.Sleep(time.Second * 2)
+}
+
+func TestChan2(t *testing.T) {
+	ctx, cancel := context.WithCancel(context.Background()) // context
+	wait.Add(1)
+	go f2(ctx)
+	time.Sleep(time.Second * 5)
+	cancel() // 发出通知 -> 通知子 goroutine 结束
+	wait.Wait()
+	fmt.Println("main over")
+}
+```
