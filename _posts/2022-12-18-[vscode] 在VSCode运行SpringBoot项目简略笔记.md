@@ -39,7 +39,7 @@ tags:
 
 添加configurations配置，如下所示：
 
-```json
+```java
 {
     "launch": {       
         "configurations": [
