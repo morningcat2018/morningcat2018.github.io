@@ -7,4 +7,6 @@
 
 ## 搭建框架
 
-> docsify serve
+- [jekyll 教程入门](https://wenfengsat.github.io/2018/06/19/jekyll%E6%95%99%E7%A8%8B%E5%85%A5%E9%97%A8/)
+
+> jekyll --server
