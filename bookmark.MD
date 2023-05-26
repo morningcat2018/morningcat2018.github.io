@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      网址书签
+title:      bookmark
 subtitle:   搜集的网址资源
 date:       2022-03-04
 author:     BY morningcat
