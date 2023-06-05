@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      anime
+title:      动漫
 subtitle:   
 date:       2019-11-20
 author:     BY morningcat
