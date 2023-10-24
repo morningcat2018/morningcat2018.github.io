@@ -54,14 +54,20 @@ tags:
 
 ## OS
 - [GNU操作系统](https://www.gnu.org/doc/doc.html)
-- [Linux Kernel](https://www.kernel.org/)
-- [Liunx 内核源码在线阅读](https://elixir.bootlin.com/linux/v2.6.13/source)
 - [开源世界旅行手册](https://i.linuxtoy.org/docs/guide/index.html)
 - [操作系统：设计与实现 (2022 春季学期)](http://jyywiki.cn/OS/2022/)
 - [操作系统：设计与实现 (2023 春季学期)](https://jyywiki.cn/OS/2023/)
 - [（哈尔滨工业大学）操作系统](https://www.bilibili.com/video/BV1y7411P7Hz)
 - [Operating Systems Course Notes Main Page](https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/)
 - [Parallel Programming](https://mirrors.edge.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html)
+
+## Linux
+
+- [Linux Kernel](https://www.kernel.org/)
+- [Linux Kernel(中科大镜像)](https://mirrors.ustc.edu.cn/kernel.org/)
+- [Linux Kernel(南大镜像)](https://mirrors.nju.edu.cn/kernel.org/)
+- [Liunx 内核源码在线阅读](https://elixir.bootlin.com/linux/v2.6.13/source)
+- [在线阅读woboq](https://codebrowser.dev/linux/)
 
 ## CPU
 
