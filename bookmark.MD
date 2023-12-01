@@ -84,6 +84,8 @@ tags:
 
 ## RFC
 
+- [w3](https://www.w3.org/)
+- [rfc-editor](https://www.rfc-editor.org/rfc-index.html)
 - [faqs](http://www.faqs.org/rfcs/)
 - [ietf](https://www.ietf.org/rfc/)
 - [freesoft](https://www.freesoft.org/CIE/RFC/793/)
@@ -92,20 +94,24 @@ tags:
 ## 编程语言
 
 - [编程语言排行榜](https://www.tiobe.com/tiobe-index/)
-- [C 语言教程](https://wangdoc.com/clang/)
-- [cplusplus](http://www.cplusplus.com/doc/tutorial/)
-- [Microsoft Learn C++](https://learn.microsoft.com/zh-cn/cpp/cpp/destructors-cpp?view=msvc-160)
 - [Kotlin 语言中文站](https://www.kotlincn.net/docs/reference/classes.html)
-- [JavaScript. The Core: 2nd Edition](http://dmitrysoshnikov.com/ecmascript/javascript-the-core-2nd-edition/)
 - [Node入门](https://www.nodebeginner.org/index-zh-cn.html#javascript-and-nodejs)
+- [JavaScript. The Core: 2nd Edition](http://dmitrysoshnikov.com/ecmascript/javascript-the-core-2nd-edition/)
 - [CSS教程](https://www.pengfeixc.com/tutorial/css/box-model)
 
+#### C & C++
+
+- [cplusplus](http://www.cplusplus.com/doc/tutorial/)
+- [C++ 参考手册](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
+- [C++ Standard Library headers](https://en.cppreference.com/w/cpp/header)
+- [C++ Programming](https://en.wikibooks.org/wiki/C++_Programming)
+- [C++ API 文档](https://www.apiref.com/cpp-zh/cpp/chrono.html)
+- [Microsoft Learn C++](https://learn.microsoft.com/zh-cn/cpp/cpp/destructors-cpp?view=msvc-160)
 
 ## 资料与手册
 
-- [RFC](https://www.ietf.org/rfc/rfc3629.txt)
+- [C 语言教程](https://wangdoc.com/clang/)
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
-
 - [microservices](https://martinfowler.com/articles/microservices.html)
 - [Apache RocketMQ开发者指南](https://www.itmuch.com/books/rocketmq/)
 - [elasticsearch 官网手册-中文](https://www.elastic.co/guide/cn/elasticsearch/guide/current/search-in-depth.html)
@@ -151,6 +157,15 @@ tags:
 - [Getting Started with the G1 Garbage Collector](https://www.oracle.com/technetwork/tutorials/tutorials-1876574.html)
 - [Inside the Java Virtual Machine](https://www.artima.com/insidejvm/ed2/)
 - [Java Search](http://www.docjar.com/)
+- J2EE patterns [http://www.corej2eepatterns.com/](http://www.corej2eepatterns.com/)
+- JSR Java 规范提案 [https://jcp.org/en/jsr/all](https://jcp.org/en/jsr/all)
+- JSR-j2se [https://www.jcp.org/en/jsr/platform?listBy=2&listByType=platform](https://www.jcp.org/en/jsr/platform?listBy=2&listByType=platform)
+- JSR-j2ee https://jcp.org/en/jsr/platform?listBy=3&listByType=platform
+
+#### java API
+
+- [java6中文](https://tool.oschina.net/apidocs/apidoc?api=jdk-zh)
+- [java6](https://tool.oschina.net/apidocs/apidoc?api=jdk_6u30)
 
 ## Golang
 
