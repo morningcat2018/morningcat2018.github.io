@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Activity lifecycle and state
-subtitle:   
+title:      android 笔记七
+subtitle:   Services
 date:       2023-12-07
 author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg

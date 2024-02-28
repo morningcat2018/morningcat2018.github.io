@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Activities and intents
-subtitle:   
+title:      android 笔记二
+subtitle:   Activities and intents
 date:       2023-11-30
 author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg

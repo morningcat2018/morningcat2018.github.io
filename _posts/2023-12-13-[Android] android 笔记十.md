@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Buttons and clickable images
-subtitle:   
+title:      android 笔记十
+subtitle:   Buttons and clickable images
 date:       2023-12-13
 author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg

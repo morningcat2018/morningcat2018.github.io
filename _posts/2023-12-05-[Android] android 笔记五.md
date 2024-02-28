@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Activity lifecycle and state
-subtitle:   
+title:      android 笔记五
+subtitle:   Layouts and resources for the UI
 date:       2023-12-05
 author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg

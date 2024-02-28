@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Activity lifecycle and state
-subtitle:   
+title:      android 笔记三
+subtitle:   Activity lifecycle and state
 date:       2023-11-30
 author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
