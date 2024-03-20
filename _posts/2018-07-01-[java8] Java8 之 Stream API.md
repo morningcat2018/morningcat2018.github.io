@@ -13,7 +13,7 @@ tags:
 
 ## 总览
 
-![Stream_API_思维导图](https://github.com/morningcat2018/morningcat2018.github.io/blob/master/img/20190213/20190213_java8_stream.png)
+![Stream_API_思维导图](/img/20190213/20190213_java8_stream.png)
 
 ## 1.介绍
 
