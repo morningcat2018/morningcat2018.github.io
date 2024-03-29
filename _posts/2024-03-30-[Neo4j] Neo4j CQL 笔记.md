@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Neo4j 笔记
-subtitle:   之 CQL 语句1
+title:      Neo4j 笔记 之 CQL 基础语法
+subtitle:   之 基本节点与关系
 date:       2024-03-30
 author:     BY morningcat
 header-img: img/neo4j/neo4j.png
