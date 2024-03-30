@@ -280,3 +280,10 @@ return q,w
 - Aggregation	它们用于对 CQL 查询结果执行一些聚合操作
 - Relationship	它们用于获取关系的详细信息，例如 startnode、endnode 等
 
+## 后期
+
+> load csv from "file///111.csv" as line create (:relationship_a {from:line[1],relation:line[3],to:line[0]})
+
+> load csv from "filr///112.csv" as line create (:person {name:line[0]})
+
+> match (n:person {name:"nick"}),(m:relationship_a),(s:person) where n.name=m.from and m.to=s.name create (n)-[:relation_b {name:m.relation}]->(s) return .name,m.relation,s.name
