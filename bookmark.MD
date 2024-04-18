@@ -10,6 +10,15 @@ tags:
     - document
 ---
 
+## 常用
+
+- [blog-archives](https://gitee.com/mengzhang6/blog-archives)
+- [studygo](https://morningcat2018.github.io/studygoNote/#/)
+- [go36](https://morningcat2018.github.io/studygo36/#/)
+- [mysql](https://relph1119.github.io/mysql-learning-notes/#/)
+- [CSDN](https://blog.csdn.net/u013837825?type=blog)
+- [稀土掘金](https://juejin.cn/user/2647279730438461/columns)
+
 
 
 ## 代码平台
