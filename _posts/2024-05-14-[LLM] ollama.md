@@ -4,7 +4,7 @@ title:      搭建本地大预言模型
 subtitle:   使用ollama
 date:       2024-05-14
 author:     BY morningcat
-header-img: png/llm/llm.jpeg
+header-img: img/201904/UNADJUSTEDNONRAW_thumb_652.jpg
 catalog: true
 tags:
     - LLM
@@ -44,7 +44,7 @@ Ollama 是一个便于本地部署和运行大型语言模型（Large Language M
     - Phi-3 Mini is a 3.8B parameters, lightweight, state-of-the-art open model by Microsoft.
 - gemma
     - Gemma is a family of lightweight, state-of-the-art open models built by Google DeepMind. Updated to version 1.1
-- [更多](https://ollama.com/library)[若前面网址无法打开可以查看离线文档](pdf/llm/ollama library.pdf)
+- [更多](https://ollama.com/library)...[若前面网址无法打开可以查看离线文档](/pdf/llm/ollama library.pdf)
 
 ## 如何下载
 
@@ -147,7 +147,7 @@ Use """ to begin a multi-line message.
 
 > ollama run llama3:8b-text
 
-[等等](pdf/llm/llama3 tags.pdf)
+[等等](/pdf/llm/llama3 tags.pdf)
 
 ## 使用 API 与 llama3 进行对话
 
