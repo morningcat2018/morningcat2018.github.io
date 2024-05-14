@@ -21,7 +21,7 @@ tags:
 
 虽然 ChatGPT 为代表的LLM在生成类人文本方面表现出了卓越的能力，但它们很容易继承和放大训练数据中存在的偏差。这可能表现为对不同人口统计数据的歪曲表述或不公平待遇，例如基于种族、性别、语言和文化群体的不同观点与态度。
 
--- 维基百科
+-- [维基百科](https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B)
 
 ## 什么是ollama
 
@@ -32,9 +32,9 @@ Ollama 是一个便于本地部署和运行大型语言模型（Large Language M
 - 语言库和第三方库支持：它提供了一个模型库，用户可以从中下载并运行各种模型。此外，也支持通过 ollama-python 和 ollama-js 等库与其他软件集成。
 - 快速启动和易于定制：用户只需简单的命令就可以运行模型。对于想要自定义模型的用户，Ollama 也提供了如从 GGUF 导入模型、调整参数和系统消息以及创建自定义提示（prompt）的功能。
 
-[ollama 官网](https://ollama.com/)
-
-[ollama Github](https://github.com/ollama/ollama)
+网站
+- [ollama 官网](https://ollama.com/)
+- [ollama Github](https://github.com/ollama/ollama)
 
 ## 支持哪些大预言模型
 
@@ -44,7 +44,7 @@ Ollama 是一个便于本地部署和运行大型语言模型（Large Language M
     - Phi-3 Mini is a 3.8B parameters, lightweight, state-of-the-art open model by Microsoft.
 - gemma
     - Gemma is a family of lightweight, state-of-the-art open models built by Google DeepMind. Updated to version 1.1
-- [更多](https://ollama.com/library)
+- [更多](https://ollama.com/library)[若前面网址无法打开可以查看离线文档](pdf/llm/ollama library.pdf)
 
 ## 如何下载
 
@@ -131,7 +131,7 @@ Available Commands:
 Use """ to begin a multi-line message.
 ```
 
-使用 `/bye` 推出交流
+使用 `/bye` 退出交流
 
 ## llama3 还有[其他的模型文件](https://ollama.com/library/llama3/tags)
 
@@ -147,7 +147,7 @@ Use """ to begin a multi-line message.
 
 > ollama run llama3:8b-text
 
-等等
+[等等](pdf/llm/llama3 tags.pdf)
 
 ## 使用 API 与 llama3 进行对话
 
@@ -202,6 +202,12 @@ curl -X POST http://localhost:11434/api/generate -d '{
 
 [更多API文档资料](https://github.com/ollama/ollama/blob/main/docs/api.md)
 
+
+## 更多资料
+
+- https://blog.csdn.net/sinat_29950703/article/details/136194337
+- https://sspai.com/post/85193
+- https://zhuanlan.zhihu.com/p/695040359
 
 
 
