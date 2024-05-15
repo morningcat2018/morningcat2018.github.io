@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      搭建本地大预言模型
+title:      搭建本地大语言模型
 subtitle:   使用ollama
 date:       2024-05-14
 author:     BY morningcat
@@ -11,7 +11,7 @@ tags:
 ---
 
 
-## 什么是大预言模型
+## 什么是大语言模型
 
 大语言模型（英语：large language model，LLM）是一种语言模型，由具有许多参数（通常数十亿个权重或更多）的人工神经网络组成，使用自监督学习或半监督学习对大量未标记文本进行训练。大型语言模型在2018年左右出现，并在各种任务中表现出色。
 
@@ -36,7 +36,7 @@ Ollama 是一个便于本地部署和运行大型语言模型（Large Language M
 - [ollama 官网](https://ollama.com/)
 - [ollama Github](https://github.com/ollama/ollama)
 
-## 支持哪些大预言模型
+## 支持哪些大语言模型
 
 - llama3
     - Meta Llama 3: The most capable openly available LLM to date
@@ -201,6 +201,59 @@ curl -X POST http://localhost:11434/api/generate -d '{
 ```
 
 [更多API文档资料](https://github.com/ollama/ollama/blob/main/docs/api.md)
+
+## 自定义 python 脚本
+
+```py
+import json
+
+import requests
+
+
+class ENV:
+    HOST = "http://localhost:11434"
+
+
+class OllamaClient:
+
+    def __init__(self, model="llama3"):
+        self.model = model
+
+    def generate(self, input):
+        url = ENV.HOST + '/api/generate'
+        payload = {
+            "model": self.model,
+            "prompt": input
+        }
+        headers = {'Content-Type': 'application/json'}
+        response = requests.post(url, json=payload, headers=headers, stream=True)
+        for line in response.iter_lines():
+            line_json = json.loads(line)
+            if line_json["done"] == "true":
+                break
+            print(line_json["response"], end="", flush=True)
+
+
+if __name__ == '__main__':
+    OllamaClient().generate("python 遍历字典")
+
+```
+
+## python 官方API
+
+https://github.com/ollama/ollama-python
+
+> pip install ollama
+
+```py
+import ollama
+
+if __name__ == '__main__':
+    stream = ollama.generate('llama3', 'Why is the sky blue?', stream=True)
+    for chunk in stream:
+        print(chunk['response'], end='', flush=True)
+
+```
 
 
 ## 更多资料
