@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
 catalog: true
 tags:
-    - Python
+    - python
 ---
 
 
@@ -83,3 +83,46 @@ ln -snf ../Cellar/python/3.7.3/bin/python3 python
 参考资料：
 
 https://blog.csdn.net/wangye1989_0226/article/details/84862788
+
+
+## 2024 重新梳理笔记
+
+- 当前环境python3.12
+
+---
+
+开启虚拟环境
+
+> mkdir my-project-path && cd my-project-path
+
+> python -m venv env
+
+在Linux环境或MAC环境
+
+> source env/bin/activate
+
+在Windows环境
+
+> env\Scripts\activate.bat
+
+## pip 安装使用国内镜像
+
+
+临时使用国内镜像源
+
+> pip install xxx -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+永久使用国内镜像源
+
+> pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+> pip config list
+
+
+
+除了清华大学的镜像源，还有其他一些常用的镜像源包括：
+
+- 阿里云：https://mirrors.aliyun.com/pypi/simple/
+- 中国科技大学：https://pypi.mirrors.ustc.edu.cn/simple/
+- 豆瓣(douban)：http://pypi.douban.com/simple/
+- 华为云：https://mirrors.huaweicloud.com/repository/pypi/simple
