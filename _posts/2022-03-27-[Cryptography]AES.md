@@ -1,13 +1,13 @@
 ---
 layout:     post
 title:      AES算法
-subtitle:   对称加密
+subtitle:   高级加密标准
 date:       2022-03-27
 author:     BY morningcat
 header-img: img/201904/UNADJUSTEDNONRAW_thumb_643.jpg
 catalog: true
 tags:
-    - 密码学
+    - Cryptography
 ---
 
 ## 概念

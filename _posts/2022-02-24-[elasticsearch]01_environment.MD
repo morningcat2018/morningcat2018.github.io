@@ -1,13 +1,13 @@
 ---
 layout:     post
-title:      elasticsearch系统学习笔记1
+title:      elasticsearch系统学习笔记-01
 subtitle:   环境搭建
 date:       2022-02-24
 author:     BY morningcat
 header-img: img/201904/UNADJUSTEDNONRAW_thumb_643.jpg
 catalog: true
 tags:
-    - elasticsearch系统学习笔记
+    - elasticsearch
 ---
 
 

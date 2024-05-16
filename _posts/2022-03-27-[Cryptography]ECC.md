@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/201904/UNADJUSTEDNONRAW_thumb_643.jpg
 catalog: true
 tags:
-    - 密码学
+    - Cryptography
 ---
 
 ## ECC 算法

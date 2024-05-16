@@ -1,13 +1,13 @@
 ---
 layout:     post
 title:      Java elasticsearch-rest-high-level-client 学习笔记2
-subtitle:   聚合
-date:       2022-02-24
+subtitle:   聚合的使用
+date:       2022-02-25
 author:     BY morningcat
 header-img: img/201904/UNADJUSTEDNONRAW_thumb_643.jpg
 catalog: true
 tags:
-    - elasticsearch系统学习笔记
+    - elasticsearch
 ---
 
 

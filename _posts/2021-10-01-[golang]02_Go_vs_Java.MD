@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/201904/UNADJUSTEDNONRAW_thumb_65d.jpg
 catalog: true
 tags:
-    - golang 学习笔记
+    - golang
 ---
 
 # Go 与 Java 语法上的区别
