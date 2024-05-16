@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/201904/UNADJUSTEDNONRAW_thumb_643.jpg
 catalog: true
 tags:
-    - ProGit笔记
+    - ProGit
 ---
 
 [Pro Git 文档](https://git-scm.com/book/zh/v2)

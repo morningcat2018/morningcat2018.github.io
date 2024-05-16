@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
 catalog: true
 tags:
-    - 算法
+    - algorithm
 ---
 
 - [旋转字符串](https://github.com/julycoding/The-Art-Of-Programming-By-July-2nd/blob/master/ebook/zh/01.01.md)

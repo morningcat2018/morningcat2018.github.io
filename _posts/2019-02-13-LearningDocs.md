@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
 catalog: true
 tags:
-    - 文档
+    - document
 ---
 
 [LearningDocs](https://github.com/morningcat2018/LearningDocs)
