@@ -161,8 +161,7 @@ install path /usr/local/lib/node_modules/
 
 > vue init webpack myvuedemo
 
-
-#### myvuedemo Build Setup
+myvuedemo Build Setup
 
 ``` bash
 # install dependencies
@@ -178,7 +177,6 @@ npm run build
 npm run build --report
 ```
 
-
 #### webpack
 
 > npm install webpack -g
@@ -189,4 +187,12 @@ npm run build --report
 
 
 #### vue-router
+
+- 路由管理器
+- 与Vue.js核心深度集成
+
+#### 整合 ElementUI
+
+> vue init webpack vue-elementui
+
 
