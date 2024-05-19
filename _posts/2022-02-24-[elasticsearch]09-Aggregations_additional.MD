@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      elasticsearch系统学习笔记9-（补充1）
+title:      elasticsearch系统学习笔记9-补充1
 subtitle:   聚合分析 Aggregations
 date:       2022-02-24
 author:     BY morningcat

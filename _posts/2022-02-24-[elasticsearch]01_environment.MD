@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      elasticsearch系统学习笔记-01
+title:      elasticsearch系统学习笔记1
 subtitle:   环境搭建
 date:       2022-02-24
 author:     BY morningcat
@@ -35,7 +35,7 @@ tags:
 
 >  ./bin/elasticsearch
 
-> ps -ef | grep elastic
+> `ps -ef | grep elastic`
 
 浏览器访问：http://127.0.0.1:9200/ 验证是否启动正常
 

@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
 catalog: true
 tags:
-    - java多线程
+    - java
 ---
 
 ## 多线程控制工具类 CountDownLatch 的故事

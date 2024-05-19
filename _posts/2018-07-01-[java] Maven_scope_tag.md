@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
 catalog: true
 tags:
-    - java框架
+    - java
 ---
 
 可参考[官网文档](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#dependency-scope)

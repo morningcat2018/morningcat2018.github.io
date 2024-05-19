@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/20190225/java-book.jpg
 catalog: true
 tags:
-    - java多线程
+    - java
 ---
 ## 一、基础知识
 

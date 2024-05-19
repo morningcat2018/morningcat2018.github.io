@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
 catalog: true
 tags:
-    - java多线程
+    - java
 ---
 ## 同步辅助类 CyclicBarrier 的故事
 

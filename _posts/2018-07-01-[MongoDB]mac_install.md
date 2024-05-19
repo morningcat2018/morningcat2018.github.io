@@ -2,7 +2,7 @@
 layout:     post
 title:      Mac环境下安装MongoDB环境
 subtitle:   包括使用SpringData操作MongoDB数据
-date:       2019-02-18
+date:       2018-07-01
 author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
 catalog: true
@@ -41,7 +41,7 @@ https://www.mongodb.com/download-center/community?jmp=docs
 
 ### 停止
 
-> ps -ef | grep mongod 
+> `ps -ef | grep mongod`
 
 > kill #pid
 

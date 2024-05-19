@@ -7,5 +7,5 @@ author:     BY morningcat
 header-img: img/201904/UNADJUSTEDNONRAW_thumb_62b.jpg
 catalog: true
 tags:
-    - java多线程
+    - java
 ---

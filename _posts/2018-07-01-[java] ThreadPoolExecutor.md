@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/201904/UNADJUSTEDNONRAW_thumb_656.jpg
 catalog: true
 tags:
-    - java多线程
+    - java
 ---
 
 关于`ThreadPoolExecutor`的一些资料汇总及个人理解

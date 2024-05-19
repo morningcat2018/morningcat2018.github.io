@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/20190213/top_2019_Space.jpg
 catalog: true
 tags:
-    - java框架
+    - java
 ---
 
 ReactiveX的每种编程语言的实现都实现了一组操作符的集合。不同的实现之间有很多重叠的部分，也有一些操作符只存在特定的实现中。每种实现都倾向于用那种编程语言中他们熟悉的上下文中相似的方法给这些操作符命名。

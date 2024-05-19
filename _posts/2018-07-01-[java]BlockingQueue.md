@@ -7,7 +7,7 @@ author:     BY morningcat
 header-img: img/201904/UNADJUSTEDNONRAW_thumb_656.jpg
 catalog: true
 tags:
-    - java集合
+    - java
 ---
 
 
