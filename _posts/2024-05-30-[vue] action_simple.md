@@ -17,7 +17,7 @@ tags:
 
 下载[vue.js v2](https://v2.cn.vuejs.org/js/vue.js)
 
-```js
+```md
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +48,7 @@ tags:
 
 ## 数据,事件与方法
 
-```js
+```md
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,7 +93,7 @@ tags:
 
 ## 属性绑定 与 双向数据绑定
 
-```js
+```md
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,7 +136,7 @@ tags:
 
 ## 计算属性与侦听器
 
-```js
+```md
 <!DOCTYPE html>
 <html lang="en">
 
@@ -187,7 +187,7 @@ tags:
 
 注意:打开控制台,查看元素,比较两者不同点
 
-```js
+```md
 <!DOCTYPE html>
 <html lang="en">
 
@@ -228,7 +228,7 @@ tags:
 
 ## TodoList
 
-```js
+```md
 <!DOCTYPE html>
 <html lang="en">
 
@@ -274,7 +274,7 @@ tags:
 
 ## TodoList 组件化
 
-```js
+```md
 <!DOCTYPE html>
 <html lang="en">
 
@@ -337,7 +337,7 @@ tags:
 
 ## TodoList 子组件与父组件的交互
 
-```js
+```md
 <!DOCTYPE html>
 <html lang="en">
 
