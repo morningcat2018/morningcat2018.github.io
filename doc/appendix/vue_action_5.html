@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>myvuedemo</title>
+  <script src="./vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="change_flag">显示还是隐藏,这是个问题</button>
+    <div v-if="show_flag">Hello</div>
+    <div v-show="show_flag">World</div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        show_flag: true
+      },
+      methods: {
+        change_flag: function () {
+          this.show_flag = !this.show_flag
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

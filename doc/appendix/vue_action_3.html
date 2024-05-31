@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>myvuedemo</title>
+  <script src="./vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div v-bind:title="message">属性绑定</div>
+    <div :title="message">属性绑定2</div> 
+    <!-- :title= 与 v-bind:title= 等效-->
+    <button v-on:click="handle_event">改变title属性</button><br/>
+    
+    <!-- 双向数据绑定 -->
+    <input v-model="content">
+    <div>{{content}}</div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!',
+        content: ''
+      },
+      methods: {
+        handle_event: function () {
+          this.message = 'Hello World'
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

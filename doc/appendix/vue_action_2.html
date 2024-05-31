@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>myvuedemo</title>
+  <script src="./vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h3>{{ message }}</h3>
+    <h3 v-text="display_text"></h3>
+    <h3 v-html="html_content"></h3>
+    <div v-on:click="handle_event">测试点击事件</div>
+    <div @click="handle_event2('morningcat')">测试点击事件2</div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!',
+        display_text: "你好啊",
+        html_content: '<a href="https://www.bilibili.com/">bilibili</a>'
+      },
+      methods: {
+        handle_event: function () {
+          console.log('click')
+          this.message = 'Hello World'
+        },
+        handle_event2: function (v) {
+          this.message = 'Hello ' + v
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

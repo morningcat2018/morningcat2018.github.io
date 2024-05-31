@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>myvuedemo</title>
+  <script src="./vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div>
+      <input v-model="input_value" />
+      <button @click="submit_value">Add to list</button> <!-- @click="submit_value 等效于 v-on:click="submit_value" -->
+    </div>
+    <ul>
+      <li v-for="(item,index) of item_list" :key="index"> <!-- :key="index" 等效于 v-bind:key="index" -->
+        {{item}}
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app', 
+      data: {
+        message: 'Hello Vue!',
+        input_value: '',
+        item_list: []
+      },
+      methods: {
+        submit_value: function () {
+          this.item_list.push(this.input_value)
+          this.input_value = ''
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

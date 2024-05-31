@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>myvuedemo</title>
+  <script src="./vue.js"></script>
+</head>
+
+<body>
+  <!-- 挂载点 -->
+  <div id="app">
+    {{ message }}
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app', // 指定挂载点
+      data: {
+        message: 'Hello Vue!'
+      }
+    })
+  </script>
+</body>
+
+</html>
